@@ -1,0 +1,70 @@
+# ───── FLUTTER 기본 빌드/캐시 ─────
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+pubspec.lock
+
+# ───── 바이너리 산출물 ─────
+*.apk
+*.ipa
+*.aab
+*.so
+*.dSYM/
+*.zip
+*.tar.gz
+
+# ───── IDE/에디터 설정 ─────
+.vscode/            # VSCode 설정 (혼자 작업 시 무시)
+.idea/              # Android Studio 설정
+*.iml
+
+# ───── 환경 변수 및 민감 정보 ─────
+.env
+.env.*
+lib/constants/env.dart
+
+# ───── Android 관련 ─────
+android/.gradle/
+android/captures/
+android/local.properties
+android/app/build/
+android/key.properties
+
+# ───── iOS 관련 ─────
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/DerivedData/
+ios/build/
+
+# ───── macOS 관련 ─────
+macos/Flutter/ephemeral/
+macos/Pods/
+macos/build/
+
+# ───── Web 관련 ─────
+web/.dart_tool/
+web/build/
+
+# ───── Xcode 캐시/사용자 설정 ─────
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata/
+*.xcuserdatad/
+*.xcodeproj/project.xcworkspace/
+
+# ───── 시스템 파일/임시 파일 ─────
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.lock
+
+# FVM Version Cache
+.fvm/

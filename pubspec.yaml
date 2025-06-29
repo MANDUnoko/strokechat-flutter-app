@@ -1,0 +1,36 @@
+name: chat_app 
+description: A new Flutter project for medical chatbot.
+version: 1.0.0+1
+
+environment:
+  sdk: '^3.8.1' # 현재 Flutter SDK (Dart SDK) 버전
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  http: ^1.2.1 # HTTP 통신을 위한 패키지
+  shared_preferences: ^2.2.3 # JWT 토큰, 사용자 정보 저장을 위한 패키지
+  intl: ^0.19.0 # 날짜 형식 지정을 위한 패키지
+  flutter_dotenv: ^5.1.0 # .env 파일에서 환경 변수를 읽어오기 위한 패키지
+  uuid: ^4.3.3 # UUID 생성을 위한 패키지 (user_model.dart, chat_model.dart 등에서 사용)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_markdown: ^0.6.17+1 
+  icons_plus: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/ # SplashScreen에서 사용될 이미지 폴더 (필요하다면 추가)
+  fonts:
+    - family: NotoSansKR
+      fonts:
+        - asset: assets/fonts/NotoSansKR-Regular.ttf
+        - asset: assets/fonts/NotoSansKR-Bold.ttf
+          weight: 700
+
+
