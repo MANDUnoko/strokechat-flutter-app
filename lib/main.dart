@@ -12,13 +12,7 @@ import 'screens/chat_screen.dart';
 
 import '../constants/env.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load();
-
-  // ✅ 상태바, 네비게이션바 숨기기 (시연용 전체화면)
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-
+void main() {
   debugPrint('🔥 DJANGO_BASE_URL = ${Env.djangoBaseUrl}');
   debugPrint('🔥 FASTAPI_BASE_URL = ${Env.fastapiBaseUrl}');
   runApp(const StrokeChatApp());
@@ -34,15 +28,15 @@ class StrokeChatApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        fontFamily: 'NotoSansKR',
+        fontFamily: 'NotoSansKR', // 기본 폰트 통일 (assets/fonts에 등록되어 있어야 함)
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF2C6E91),
+          seedColor: const Color(0xFF2C6E91), // 로고 텍스트 색상 기반
           brightness: Brightness.light,
         ),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF2C6E91),
-          foregroundColor: Colors.white,
+          backgroundColor: Color(0xFF2C6E91), // 앱바 배경색
+          foregroundColor: Colors.white, // 앱바 텍스트/아이콘
           elevation: 0,
           titleTextStyle: TextStyle(
             fontSize: 20,
@@ -77,9 +71,9 @@ class StrokeChatApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             borderSide: BorderSide(color: Colors.grey.shade300),
           ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-            borderSide: BorderSide(color: Color(0xFF2C6E91), width: 2),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(color: Color(0xFF2C6E91), width: 2),
           ),
           labelStyle: TextStyle(color: Colors.grey.shade700),
           hintStyle: TextStyle(color: Colors.grey.shade500),
