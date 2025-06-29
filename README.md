@@ -22,7 +22,7 @@ AI 챗봇과의 대화를 통해 보다 쉬운 설명과 후속 질의응답을 
 - **Frontend**
   - Flutter (Andriod Pixel 8 기반 작업)
   - UI 구조: Splash → Login → Home → 결과 리스트 → 챗봇
-  - 사용자 경험 개선을 위한 Apple/Toss 감성 디자인
+  - 사용자 경험 개선을 위한 디자인
 
 - **Backend**
   - Django: 사용자 인증, 유전자 결과 API
